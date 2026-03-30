@@ -14,7 +14,10 @@
 
 NAME	=	polymorphism
 
-CXXFILES	=	main.cpp
+CXXFILES	=	main.cpp\
+				Animal.cpp\
+				Dog.cpp\
+				Cat.cpp
 
 OFILES	= $(addprefix $(BUILDDIR),$(CXXFILES:.cpp=.o))
 DEPFILES	= $(addprefix $(BUILDDIR),$(CXXFILES:.cpp=.d))
