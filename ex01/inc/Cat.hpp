@@ -6,7 +6,7 @@
 /*   By: avaliull <avaliull@student.codam.nl>              +#+                */
 /*                                                        +#+                 */
 /*   Created: 2026/03/27 19:19:12 by avaliull            #+#    #+#           */
-/*   Updated: 2026/03/30 20:24:42 by avaliull            ########   odam.nl   */
+/*   Updated: 2026/03/30 20:24:34 by avaliull            ########   odam.nl   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@
 # endif /* CLR_NON and other CLR defines */
 
 #include "Animal.hpp"
+#include "Brain.hpp"
 
 class	Cat : public Animal {
 public:
@@ -35,9 +36,14 @@ public:
 	auto makeSound(
 		void
 	) const -> void override;
+	auto getBrainAddress(
+		void
+	) const -> Brain* override;
+
 
 protected:
 private:
+	Brain*	_brain;
 };
 
 #endif //CAT_HPP_

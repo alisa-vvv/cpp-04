@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                            ::::::::        */
-/*   Cat.hpp                                                 :+:    :+:       */
+/*   Dog.hpp                                                 :+:    :+:       */
 /*                                                          +:+               */
 /*   By: avaliull <avaliull@student.codam.nl>              +#+                */
 /*                                                        +#+                 */
 /*   Created: 2026/03/27 19:19:12 by avaliull            #+#    #+#           */
-/*   Updated: 2026/03/30 20:24:42 by avaliull            ########   odam.nl   */
+/*   Updated: 2026/03/30 20:16:39 by avaliull            ########   odam.nl   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_HPP_
-# define CAT_HPP_
+#ifndef DOG_HPP_
+# define DOG_HPP_
 
 # ifndef CLR_NON
 #  define	CLR_NON "\033[0m"
@@ -23,21 +23,24 @@
 # endif /* CLR_NON and other CLR defines */
 
 #include "Animal.hpp"
+#include "Brain.hpp"
 
-class	Cat : public Animal {
+class	Dog : public Animal {
 public:
 	using Animal::Animal;
-	Cat();
-	Cat(const Cat& other);
-	Cat&	operator=(const Cat& other);
-	~Cat();
+	Dog();
+	Dog(const Dog& other);
+	Dog&	operator=(const Dog& other);
+	~Dog();
 
 	auto makeSound(
-		void
 	) const -> void override;
+	auto getBrainAddress(
+	) const -> Brain* override;
 
 protected:
 private:
+	Brain*	_brain;
 };
 
-#endif //CAT_HPP_
+#endif //DOG_HPP

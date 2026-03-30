@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                            ::::::::        */
-/*   Cat.hpp                                                 :+:    :+:       */
+/*   Animal.hpp                                              :+:    :+:       */
 /*                                                          +:+               */
 /*   By: avaliull <avaliull@student.codam.nl>              +#+                */
 /*                                                        +#+                 */
 /*   Created: 2026/03/27 19:19:12 by avaliull            #+#    #+#           */
-/*   Updated: 2026/03/30 20:24:42 by avaliull            ########   odam.nl   */
+/*   Updated: 2026/03/30 20:21:10 by avaliull            ########   odam.nl   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_HPP_
-# define CAT_HPP_
+#ifndef ANIMAL_HPP_
+# define ANIMAL_HPP_
 
 # ifndef CLR_NON
 #  define	CLR_NON "\033[0m"
@@ -20,24 +20,29 @@
 #  define	CLR_RED "\033[31m"
 #  define	CLR_GRN "\033[92m"
 #  define	CLR_MAG "\033[95m"
-# endif /* CLR_NON and other CLR defines */
+# endif // CLR_NON and other CLR defines
 
-#include "Animal.hpp"
+#include "Brain.hpp"
+#include <string>
 
-class	Cat : public Animal {
+class	Animal {
 public:
-	using Animal::Animal;
-	Cat();
-	Cat(const Cat& other);
-	Cat&	operator=(const Cat& other);
-	~Cat();
+	Animal();
+	Animal(const Animal& other);
+	Animal&	operator=(const Animal& other);
+	virtual ~Animal();
 
-	auto makeSound(
-		void
-	) const -> void override;
+	virtual auto makeSound(
+	) const -> void;
+	virtual auto getBrainAddress(
+	) const -> Brain*;
+	auto	getType(
+	) const -> std::string;
 
 protected:
+	std::string	_type;
 private:
+	Brain*	_brain = nullptr;
 };
 
-#endif //CAT_HPP_
+#endif //ANIMAL_HPP_
