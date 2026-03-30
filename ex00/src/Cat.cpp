@@ -6,7 +6,7 @@
 /*   By: avaliull <avaliull@student.codam.nl>              +#+                */
 /*                                                        +#+                 */
 /*   Created: 2026/03/27 19:23:14 by avaliull            #+#    #+#           */
-/*   Updated: 2026/03/30 16:09:37 by avaliull            ########   odam.nl   */
+/*   Updated: 2026/03/30 18:23:55 by avaliull            ########   odam.nl   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,6 @@ Cat::~Cat() {
 
 auto Cat::makeSound(
 	void
-) -> void {
+) const -> void {
 	std::cout << CLR_YEL << _type << ": " << CLR_NON << "Meow!"<< '\n';
 }

@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                            ::::::::        */
-/*   Cat.hpp                                                 :+:    :+:       */
+/*   WrongCat.hpp                                            :+:    :+:       */
 /*                                                          +:+               */
 /*   By: avaliull <avaliull@student.codam.nl>              +#+                */
 /*                                                        +#+                 */
 /*   Created: 2026/03/27 19:19:12 by avaliull            #+#    #+#           */
-/*   Updated: 2026/03/30 18:40:26 by avaliull            ########   odam.nl   */
+/*   Updated: 2026/03/30 18:39:44 by avaliull            ########   odam.nl   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_HPP_
-# define CAT_HPP_
+#ifndef WRONG_CAT_HPP_
+# define WRONG_CAT_HPP_
 
 # ifndef CLR_NON
 #  define	CLR_NON "\033[0m"
@@ -22,22 +22,22 @@
 #  define	CLR_MAG "\033[95m"
 # endif /* CLR_NON and other CLR defines */
 
-#include "Animal.hpp"
+#include "WrongAnimal.hpp"
 
-class	Cat : public Animal {
+class	WrongCat : public WrongAnimal {
 public:
-	using Animal::Animal;
-	Cat();
-	Cat(const Cat& other);
-	Cat&	operator=(const Cat& other);
-	~Cat();
+	using WrongAnimal::WrongAnimal;
+	WrongCat();
+	WrongCat(const WrongCat& other);
+	WrongCat&	operator=(const WrongCat& other);
+	~WrongCat();
 
 	auto makeSound(
 		void
-	) const -> void override;
+	) const -> void;
 
 protected:
 private:
 };
 
-#endif //CAT_HPP_
+#endif //WRONG_CAT_HPP_

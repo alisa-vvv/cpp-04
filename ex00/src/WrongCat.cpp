@@ -1,42 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                            ::::::::        */
-/*   Dog.cpp                                                 :+:    :+:       */
+/*   WrongCat.cpp                                            :+:    :+:       */
 /*                                                          +:+               */
 /*   By: avaliull <avaliull@student.codam.nl>              +#+                */
 /*                                                        +#+                 */
 /*   Created: 2026/03/27 19:23:14 by avaliull            #+#    #+#           */
-/*   Updated: 2026/03/30 18:23:48 by avaliull            ########   odam.nl   */
+/*   Updated: 2026/03/30 18:39:40 by avaliull            ########   odam.nl   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Dog.hpp"
+#include "WrongCat.hpp"
 #include <iostream>
 
-Dog::Dog() {
-	_type = "Dog";
-	std::cout << CLR_MAG << "Dog default constructor is called" << CLR_NON << '\n';
+WrongCat::WrongCat() {
+	_type = "WrongCat";
+	std::cout << CLR_MAG << "WrongCat default constructor is called" << CLR_NON << '\n';
 }
 
-Dog::Dog(const Dog& other) {
-	_type = "Dog";
-	std::cout << CLR_MAG << "Dog copy constructor is called" << CLR_NON << '\n';
+WrongCat::WrongCat(const WrongCat& other) {
+	_type = "WrongCat";
+	std::cout << CLR_MAG << "WrongCat copy constructor is called" << CLR_NON << '\n';
 	*this = other;
 }
 
-Dog&	Dog::operator=(const Dog& other) {
-	std::cout << CLR_MAG << "Dog assign operator is called" << CLR_NON << '\n';
+WrongCat&	WrongCat::operator=(const WrongCat& other) {
+	std::cout << CLR_MAG << "WrongCat assign operator is called" << CLR_NON << '\n';
 	if (this != &other) {
 		this->_type = other._type;
 	}
 	return (*this);
 }
 
-Dog::~Dog() {
-	std::cout << CLR_MAG << "Dog default destructor is called" << CLR_NON << '\n';
+WrongCat::~WrongCat() {
+	std::cout << CLR_MAG << "WrongCat default destructor is called" << CLR_NON << '\n';
 }
-auto Dog::makeSound(
+
+auto WrongCat::makeSound(
 	void
 ) const -> void {
-	std::cout << CLR_YEL << _type << ": " << CLR_NON << "Bark!"<< '\n';
+	std::cout << CLR_YEL << _type << ": " << CLR_NON << "Wrong meow!"<< '\n';
 }

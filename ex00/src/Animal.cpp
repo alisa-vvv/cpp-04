@@ -6,7 +6,7 @@
 /*   By: avaliull <avaliull@student.codam.nl>              +#+                */
 /*                                                        +#+                 */
 /*   Created: 2026/03/27 19:23:14 by avaliull            #+#    #+#           */
-/*   Updated: 2026/03/30 16:29:42 by avaliull            ########   odam.nl   */
+/*   Updated: 2026/03/30 18:23:38 by avaliull            ########   odam.nl   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,12 +36,12 @@ Animal::~Animal() {
 
 auto Animal::makeSound(
 	void
-) -> void {
+) const -> void {
 	std::cout << CLR_YEL << _type << ": " << CLR_NON << "platonic ideal of an animal sound!"<< '\n';
 }
 
 auto Animal::getType(
 	void
-) -> std::string {
+) const -> std::string {
 	return (_type);
 }

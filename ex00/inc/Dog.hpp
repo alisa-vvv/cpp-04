@@ -6,7 +6,7 @@
 /*   By: avaliull <avaliull@student.codam.nl>              +#+                */
 /*                                                        +#+                 */
 /*   Created: 2026/03/27 19:19:12 by avaliull            #+#    #+#           */
-/*   Updated: 2026/03/30 16:24:22 by avaliull            ########   odam.nl   */
+/*   Updated: 2026/03/30 18:22:53 by avaliull            ########   odam.nl   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ public:
 	~Dog();
 
 	auto makeSound(
-	) -> void override;
+	) const -> void override;
 
 protected:
 private:

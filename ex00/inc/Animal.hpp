@@ -6,7 +6,7 @@
 /*   By: avaliull <avaliull@student.codam.nl>              +#+                */
 /*                                                        +#+                 */
 /*   Created: 2026/03/27 19:19:12 by avaliull            #+#    #+#           */
-/*   Updated: 2026/03/30 16:31:40 by avaliull            ########   odam.nl   */
+/*   Updated: 2026/03/30 18:22:29 by avaliull            ########   odam.nl   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,9 @@ public:
 	virtual ~Animal();
 
 	virtual auto makeSound(
-	) -> void;
+	) const -> void;
 	auto	getType(
-	) -> std::string;
+	) const -> std::string;
 
 protected:
 	std::string	_type;

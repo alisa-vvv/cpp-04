@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                            ::::::::        */
-/*   Cat.hpp                                                 :+:    :+:       */
+/*   WrongAnimal.hpp                                         :+:    :+:       */
 /*                                                          +:+               */
 /*   By: avaliull <avaliull@student.codam.nl>              +#+                */
 /*                                                        +#+                 */
 /*   Created: 2026/03/27 19:19:12 by avaliull            #+#    #+#           */
-/*   Updated: 2026/03/30 18:40:26 by avaliull            ########   odam.nl   */
+/*   Updated: 2026/03/30 18:39:58 by avaliull            ########   odam.nl   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_HPP_
-# define CAT_HPP_
+#ifndef WRONG_ANIMAL_HPP_
+# define WRONG_ANIMAL_HPP_
 
 # ifndef CLR_NON
 #  define	CLR_NON "\033[0m"
@@ -20,24 +20,25 @@
 #  define	CLR_RED "\033[31m"
 #  define	CLR_GRN "\033[92m"
 #  define	CLR_MAG "\033[95m"
-# endif /* CLR_NON and other CLR defines */
+# endif // CLR_NON and other CLR defines
 
-#include "Animal.hpp"
+#include <string>
 
-class	Cat : public Animal {
+class	WrongAnimal {
 public:
-	using Animal::Animal;
-	Cat();
-	Cat(const Cat& other);
-	Cat&	operator=(const Cat& other);
-	~Cat();
+	WrongAnimal();
+	WrongAnimal(const WrongAnimal& other);
+	WrongAnimal&	operator=(const WrongAnimal& other);
+	virtual ~WrongAnimal();
 
 	auto makeSound(
-		void
-	) const -> void override;
+	) const -> void;
+	auto	getType(
+	) const -> std::string;
 
 protected:
+	std::string	_type;
 private:
 };
 
-#endif //CAT_HPP_
+#endif //WRONG_ANIMAL_HPP_
