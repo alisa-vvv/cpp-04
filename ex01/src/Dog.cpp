@@ -6,7 +6,7 @@
 /*   By: avaliull <avaliull@student.codam.nl>              +#+                */
 /*                                                        +#+                 */
 /*   Created: 2026/03/27 19:23:14 by avaliull            #+#    #+#           */
-/*   Updated: 2026/03/30 20:26:58 by avaliull            ########   odam.nl   */
+/*   Updated: 2026/03/30 20:55:27 by avaliull            ########   odam.nl   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ Dog::Dog(const Dog& other) {
 	std::cout << CLR_MAG << "Dog copy constructor is called" << CLR_NON << '\n';
 	_type = "Dog";
 	this->_type = other._type;
-	this->_brain = new Brain(*other._brain);
+	this->_brain = new Brain;
 }
 
 Dog&	Dog::operator=(const Dog& other) {

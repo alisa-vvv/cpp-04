@@ -6,7 +6,7 @@
 /*   By: avaliull <avaliull@student.codam.nl>              +#+                */
 /*                                                        +#+                 */
 /*   Created: 2026/03/27 19:17:27 by avaliull            #+#    #+#           */
-/*   Updated: 2026/03/30 20:50:50 by avaliull            ########   odam.nl   */
+/*   Updated: 2026/03/30 20:58:38 by avaliull            ########   odam.nl   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,8 +82,7 @@ auto	main(
 
 	std::cout << '\n';
 	std::cout << CLR_YEL << "animal_assign_doggo:" << CLR_NON << '\n';
-	Animal	animal_assign_doggo;
-	animal_assign_doggo = *doggo;
+	Animal	animal_assign_doggo = *doggo;
 	animal_assign_doggo.makeSound();
 	std::cout << '\n';
 
@@ -101,7 +100,7 @@ auto	main(
 	std::cout << animal_copy_doggo->getBrainAddress() << '\n';
 
 	std::cout << CLR_YEL << "animal_assign_doggo's _brain address: "<< CLR_NON;
-	std::cout << animal_copy_doggo->getBrainAddress() << '\n';
+	std::cout << animal_assign_doggo.getBrainAddress() << '\n';
 		/*
 			* endof Dog
 			*/
