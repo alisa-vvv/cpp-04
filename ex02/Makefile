@@ -12,7 +12,7 @@
 
 .DEFAULT_GOAL := all
 
-NAME	=	Absctract
+NAME	=	Abstract
 
 CXXFILES	=	main.cpp\
 				A_Animal.cpp\
