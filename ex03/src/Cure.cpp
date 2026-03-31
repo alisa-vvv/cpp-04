@@ -1,0 +1,42 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                            ::::::::        */
+/*   Cure.cpp                                                :+:    :+:       */
+/*                                                          +:+               */
+/*   By: avaliull <avaliull@student.codam.nl>              +#+                */
+/*                                                        +#+                 */
+/*   Created: 2026/03/31 20:06:54 by avaliull            #+#    #+#           */
+/*   Updated: 2026/03/31 20:35:20 by avaliull            ########   odam.nl   */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "Cure.hpp"
+
+Cure::Cure() {
+	_type = "cure";
+}
+
+Cure::Cure(std::string const& type) {
+	_type = type;
+}
+
+Cure::Cure(const Cure& other) {
+	*this = other;
+}
+
+Cure&	Cure::operator=(const Cure& other) {
+	if (this != &other)
+		*this = other;
+	return (*this);
+}
+
+Cure::~Cure() {
+}
+
+auto Cure::clone(
+	void
+) const -> AMateria* {
+	AMateria*	cure_clone = new Cure(getType());
+
+	return (cure_clone);
+}
