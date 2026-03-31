@@ -6,7 +6,7 @@
 /*   By: avaliull <avaliull@student.codam.nl>              +#+                */
 /*                                                        +#+                 */
 /*   Created: 2026/03/27 19:23:14 by avaliull            #+#    #+#           */
-/*   Updated: 2026/03/30 20:55:27 by avaliull            ########   odam.nl   */
+/*   Updated: 2026/03/31 15:43:56 by avaliull            ########   odam.nl   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,11 @@ Dog::Dog(const Dog& other) {
 	_type = "Dog";
 	this->_type = other._type;
 	this->_brain = new Brain;
+	*this->_brain = *other._brain;
 }
 
-Dog&	Dog::operator=(const Dog& other) {
+Dog&	Dog::operator=(const Dog& other)
+{
 	std::cout << CLR_MAG << "Dog assign operator is called" << CLR_NON << '\n';
 	if (this != &other) {
 		this->_type = other._type;
@@ -45,7 +47,14 @@ auto Dog::makeSound(
 ) const -> void {
 	std::cout << CLR_YEL << _type << ": " << CLR_NON << "Bark!"<< '\n';
 }
+
 auto Dog::getBrainAddress(
 ) const -> Brain* {
 	return (_brain);
+}
+
+auto Dog::thinkThoughtIndex(
+	int	index
+) const -> void {
+	std::cout <<  _type << " is thinking about: " << _brain->getThoughtIndex(index);
 }

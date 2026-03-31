@@ -6,7 +6,7 @@
 /*   By: avaliull <avaliull@student.codam.nl>              +#+                */
 /*                                                        +#+                 */
 /*   Created: 2026/03/27 19:19:12 by avaliull            #+#    #+#           */
-/*   Updated: 2026/03/30 20:53:05 by avaliull            ########   odam.nl   */
+/*   Updated: 2026/03/31 15:42:39 by avaliull            ########   odam.nl   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,15 +34,20 @@ public:
 
 	virtual auto makeSound(
 	) const -> void;
-	virtual auto getBrainAddress(
-	) const -> Brain*;
+
 	auto	getType(
 	) const -> std::string;
+
+	virtual auto getBrainAddress(
+	) const -> Brain*;
+
+	virtual auto thinkThoughtIndex(
+		int	index
+	) const -> void;
 
 protected:
 	std::string	_type;
 private:
-	Brain*	_brain = nullptr;
 };
 
 #endif //ANIMAL_HPP_

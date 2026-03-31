@@ -6,7 +6,7 @@
 /*   By: avaliull <avaliull@student.codam.nl>              +#+                */
 /*                                                        +#+                 */
 /*   Created: 2026/03/27 19:23:14 by avaliull            #+#    #+#           */
-/*   Updated: 2026/03/30 20:17:51 by avaliull            ########   odam.nl   */
+/*   Updated: 2026/03/31 15:42:54 by avaliull            ########   odam.nl   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,15 @@ auto Animal::getType(
 ) const -> std::string {
 	return (_type);
 }
+
 auto Animal::getBrainAddress(
 ) const -> Brain* {
-	return (_brain);
+	return (nullptr);
+}
+
+auto Animal::thinkThoughtIndex(
+	int	index
+) const -> void {
+	(void) index;
+	std::cout << _type << "is thinking the platonic ideal of animal thought\n";
 }

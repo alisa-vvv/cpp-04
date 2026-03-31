@@ -6,7 +6,7 @@
 /*   By: avaliull <avaliull@student.codam.nl>              +#+                */
 /*                                                        +#+                 */
 /*   Created: 2026/03/30 19:13:23 by avaliull            #+#    #+#           */
-/*   Updated: 2026/03/30 19:35:52 by avaliull            ########   odam.nl   */
+/*   Updated: 2026/03/31 15:30:40 by avaliull            ########   odam.nl   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,110 +35,17 @@ public:
 	Brain&	operator=(const Brain& other);
 	~Brain();
 
+	auto getThoughtIndex(
+		int	index
+	) const -> std::string;
+
 protected:
 private:
-	std::string	_thoughts[THOUGHT_COUNT] = {
-		"Tail",
-		"Persian",
-		"Vet",
-		"Hunt",
-		"Catnip",
-		"Sleep",
-		"Birman",
-		"Carrier",
-		"Leash",
-		"Abyssinian",
-		"Pet",
-		"Meow",
-		"Domesticated",
-		"Ocicat",
-		"Water",
-		"Maine Coon",
-		"Declaw",
-		"Litter Box",
-		"Claw",
-		"Kitten",
-		"Collar",
-		"Whiskers",
-		"Javanese",
-		"Scottish Fold",
-		"Groom",
-		"Egyptian Mau",
-		"Breed",
-		"Food",
-		"Purr",	
-		"Devon Rex",
-		"Bed",
-		"Feline",
-		"Paws",
-		"Burmese",
-		"Scratching post",
-		"Play",
-		"Animal",
-		"Scratch",
-		"Spay",
-		"Neuter",
-		"Bengal",
-		"Himalayan",
-		"Furry",
-		"British Shorthair",
-		"Toy",
-		"American Shorthair",
-		"Exotic Shorthair",
-		"Siamese",
-		"Manx",	
-		"Cuddle",
-		"Maltese",
-		"Yorkshire Terrier",
-		"Bed",
-		"Tricks",
-		"Bark",
-		"Greyhound",
-		"Leash",
-		"Bulldog",
-		"Shelter",
-		"Pomeranian",
-		"Shih Tzu",
-		"Water",
-		"Vet",
-		"Walk",
-		"Boxer",
-		"Siberian Husky",
-		"Toy",
-		"Wag",
-		"Kennel",
-		"Cuddle",
-		"German Shepherd",
-		"Animal",
-		"Tail",
-		"Dalmatian",
-		"Rescue",
-		"Puppy",
-		"Poodle",
-		"Run",
-		"Play",
-		"Dachshund",
-		"Fetch",
-		"Golden Retriever",
-		"Beagle",
-		"Collar",
-		"Obedience",
-		"Labrador Retriever",
-		"Breed",
-		"Chihuahua",
-		"Canine",
-		"Domesticated",
-		"Furry",
-		"Training",
-		"Groom",
-		"Pet",
-		"Harness",
-		"Rottweiler",
-		"Food",
-		"Paws",
-		"Bichon Frise",
-		"Crate"
-	};
+	std::string	_thoughts[THOUGHT_COUNT];
+	auto	_randomizeThoughts(
+		void
+	) -> void;
+
 };
 
 #endif /* BRAIN_HPP_ */

@@ -6,7 +6,7 @@
 /*   By: avaliull <avaliull@student.codam.nl>              +#+                */
 /*                                                        +#+                 */
 /*   Created: 2026/03/27 19:19:12 by avaliull            #+#    #+#           */
-/*   Updated: 2026/03/30 20:24:34 by avaliull            ########   odam.nl   */
+/*   Updated: 2026/03/31 15:42:15 by avaliull            ########   odam.nl   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,12 +34,14 @@ public:
 	~Cat();
 
 	auto makeSound(
-		void
 	) const -> void override;
+
 	auto getBrainAddress(
-		void
 	) const -> Brain* override;
 
+	auto thinkThoughtIndex(
+		int	index
+	) const -> void override;
 
 protected:
 private:
