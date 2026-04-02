@@ -6,7 +6,7 @@
 /*   By: avaliull <avaliull@student.codam.nl>              +#+                */
 /*                                                        +#+                 */
 /*   Created: 2026/03/31 20:06:54 by avaliull            #+#    #+#           */
-/*   Updated: 2026/04/02 16:10:23 by avaliull            ########   odam.nl   */
+/*   Updated: 2026/04/02 19:21:06 by avaliull            ########   odam.nl   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,15 @@ auto 	AMateria::getType(
 ) const -> const std::string& {
 	return (_type);
 }
+
+auto	AMateria::cleanFloor(
+	void
+) ->void {
+	for (int i = 0; i < free_floor_idx; i++) {
+		delete floor[free_floor_idx];
+	}
+}
+
 
 AMateria*	AMateria::floor[FLOOR_SIZE] { 0 };
 int			AMateria::free_floor_idx { 0 };

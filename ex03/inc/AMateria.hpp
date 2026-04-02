@@ -6,7 +6,7 @@
 /*   By: avaliull <avaliull@student.codam.nl>              +#+                */
 /*                                                        +#+                 */
 /*   Created: 2026/03/31 20:02:24 by avaliull            #+#    #+#           */
-/*   Updated: 2026/04/02 16:10:12 by avaliull            ########   odam.nl   */
+/*   Updated: 2026/04/02 18:59:38 by avaliull            ########   odam.nl   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@
 
 # ifndef FLOOR_SIZE
 #  define	FLOOR_SIZE 128
-# endif // CLR_NON and other CLR defines
+# endif // FLOOR_SIZE
 
 class ICharacter;
 
@@ -46,9 +46,13 @@ public:
 		void
 	) const -> AMateria* = 0;
 
-	virtual void use(
+	virtual auto use(
 		ICharacter& target
-	) = 0;
+	) -> void = 0;
+
+	static auto	cleanFloor(
+		void
+	) ->void;
 
 	static AMateria*	floor[FLOOR_SIZE];
 	static int			free_floor_idx;

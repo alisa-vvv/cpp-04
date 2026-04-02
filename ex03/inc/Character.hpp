@@ -6,7 +6,7 @@
 /*   By: avaliull <avaliull@student.codam.nl>              +#+                */
 /*                                                        +#+                 */
 /*   Created: 2026/03/31 20:41:26 by avaliull            #+#    #+#           */
-/*   Updated: 2026/04/02 16:03:38 by avaliull            ########   odam.nl   */
+/*   Updated: 2026/04/02 19:29:03 by avaliull            ########   odam.nl   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ class Character : public ICharacter {
 public:
 	Character();
 	Character(std::string name);
+	Character(const Character& other);
+	Character&	operator=(const Character& other);
 	virtual ~Character() override;
 
 	virtual std::string const& getName(
@@ -44,12 +46,8 @@ public:
 	) override;
 
 private:
-	AMateria*	_inventory[4] { 0 };
+	AMateria*	_inventory[INVENTORY_SIZE] { nullptr, nullptr, nullptr, nullptr };
 	std::string	_name { "unnamed character" };
-
-	//auto updateInventory(
-	//	AMateria*	head
-	//) -> void;
 };
 
 #endif /* CHARACTER_HPP_ */

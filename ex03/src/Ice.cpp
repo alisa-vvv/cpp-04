@@ -44,5 +44,5 @@ auto Ice::clone(
 }
 
 void Ice::use(ICharacter& target) {
-	std::cout << "* shoots an ice bilt at " << target.getName() << " *\n";
+	std::cout << "* shoots an ice bolt at " << target.getName() << " *\n";
 }
