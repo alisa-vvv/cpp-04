@@ -6,7 +6,7 @@
 /*   By: avaliull <avaliull@student.codam.nl>              +#+                */
 /*                                                        +#+                 */
 /*   Created: 2026/03/31 20:02:24 by avaliull            #+#    #+#           */
-/*   Updated: 2026/03/31 20:36:12 by avaliull            ########   odam.nl   */
+/*   Updated: 2026/04/02 16:01:39 by avaliull            ########   odam.nl   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@
 # endif // CLR_NON and other CLR defines
 
 #include "AMateria.hpp"
+#include "ICharacter.hpp"
 #include <string>
 
 class Cure : public AMateria {
@@ -40,7 +41,7 @@ public:
 		void
 	) const -> AMateria* override;
 
-	//virtual void use(ICharacter& target);
+	virtual void use(ICharacter& target) override;
 
 protected:
 private:

@@ -1,28 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                            ::::::::        */
-/*   ICharacter.hpp                                          :+:    :+:       */
+/*   ICharacter.cpp                                          :+:    :+:       */
 /*                                                          +:+               */
 /*   By: avaliull <avaliull@student.codam.nl>              +#+                */
 /*                                                        +#+                 */
-/*   Created: 2026/03/31 20:40:18 by avaliull            #+#    #+#           */
-/*   Updated: 2026/04/02 16:11:59 by avaliull            ########   odam.nl   */
+/*   Created: 2026/04/02 16:08:34 by avaliull            #+#    #+#           */
+/*   Updated: 2026/04/02 16:09:10 by avaliull            ########   odam.nl   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ICHARACTER_HPP_
-# define ICHARACTER_HPP_
+#include "ICharacter.hpp"
 
-#include "AMateria.hpp"
-#include <string>
-
-class	ICharacter {
-public:
-	virtual ~ICharacter();
-	virtual std::string const & getName() const = 0;
-	virtual void equip(AMateria* m) = 0;
-	virtual void unequip(int idx) = 0;
-	virtual void use(int idx, ICharacter& target) = 0;
-};
-
-#endif /* ICHARACTER_HPP_ */
+ICharacter::~ICharacter() {
+}

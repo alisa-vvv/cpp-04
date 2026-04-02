@@ -6,11 +6,13 @@
 /*   By: avaliull <avaliull@student.codam.nl>              +#+                */
 /*                                                        +#+                 */
 /*   Created: 2026/03/31 20:06:54 by avaliull            #+#    #+#           */
-/*   Updated: 2026/03/31 20:29:17 by avaliull            ########   odam.nl   */
+/*   Updated: 2026/04/02 16:01:30 by avaliull            ########   odam.nl   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Ice.hpp"
+#include "ICharacter.hpp"
+#include <iostream>
 
 Ice::Ice() {
 	_type = "ice";
@@ -39,4 +41,8 @@ auto Ice::clone(
 	AMateria*	ice_clone = new Ice(getType());
 
 	return (ice_clone);
+}
+
+void Ice::use(ICharacter& target) {
+	std::cout << "* shoots an ice bilt at " << target.getName() << " *\n";
 }

@@ -6,11 +6,11 @@
 /*   By: avaliull <avaliull@student.codam.nl>              +#+                */
 /*                                                        +#+                 */
 /*   Created: 2026/03/31 20:06:54 by avaliull            #+#    #+#           */
-/*   Updated: 2026/03/31 20:14:26 by avaliull            ########   odam.nl   */
+/*   Updated: 2026/04/02 16:10:23 by avaliull            ########   odam.nl   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/AMateria.hpp" // reee
+#include "AMateria.hpp" // reee
 
 AMateria::AMateria() {
 }
@@ -36,3 +36,6 @@ auto 	AMateria::getType(
 ) const -> const std::string& {
 	return (_type);
 }
+
+AMateria*	AMateria::floor[FLOOR_SIZE] { 0 };
+int			AMateria::free_floor_idx { 0 };

@@ -6,7 +6,7 @@
 /*   By: avaliull <avaliull@student.codam.nl>              +#+                */
 /*                                                        +#+                 */
 /*   Created: 2026/03/31 20:02:24 by avaliull            #+#    #+#           */
-/*   Updated: 2026/03/31 20:36:29 by avaliull            ########   odam.nl   */
+/*   Updated: 2026/04/02 16:05:33 by avaliull            ########   odam.nl   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@
 # endif // CLR_NON and other CLR defines
 
 #include "AMateria.hpp"
+#include "ICharacter.hpp"
 #include <string>
 
 class Ice : public AMateria {
@@ -40,10 +41,12 @@ public:
 		void
 	) const -> AMateria* override;
 
-	//virtual void use(ICharacter& target);
+	virtual void use(ICharacter& target) override;
 
 protected:
 private:
+	const std::string	use_message_left = "shoots ice bolt at ";
+	const std::string	use_message_right = "";
 };
 
 #endif /* ICE_HPP_ */

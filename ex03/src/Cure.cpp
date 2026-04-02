@@ -6,11 +6,13 @@
 /*   By: avaliull <avaliull@student.codam.nl>              +#+                */
 /*                                                        +#+                 */
 /*   Created: 2026/03/31 20:06:54 by avaliull            #+#    #+#           */
-/*   Updated: 2026/03/31 20:35:20 by avaliull            ########   odam.nl   */
+/*   Updated: 2026/04/02 15:36:43 by avaliull            ########   odam.nl   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cure.hpp"
+#include "ICharacter.hpp"
+#include <iostream>
 
 Cure::Cure() {
 	_type = "cure";
@@ -39,4 +41,8 @@ auto Cure::clone(
 	AMateria*	cure_clone = new Cure(getType());
 
 	return (cure_clone);
+}
+
+void Cure::use(ICharacter& target) {
+	std::cout << "* heals " << target.getName() << "'s wounds *\n";
 }

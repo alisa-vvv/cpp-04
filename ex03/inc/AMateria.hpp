@@ -6,7 +6,7 @@
 /*   By: avaliull <avaliull@student.codam.nl>              +#+                */
 /*                                                        +#+                 */
 /*   Created: 2026/03/31 20:02:24 by avaliull            #+#    #+#           */
-/*   Updated: 2026/03/31 20:14:45 by avaliull            ########   odam.nl   */
+/*   Updated: 2026/04/02 16:10:12 by avaliull            ########   odam.nl   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,12 @@
 
 #include <string>
 
+# ifndef FLOOR_SIZE
+#  define	FLOOR_SIZE 128
+# endif // CLR_NON and other CLR defines
+
+class ICharacter;
+
 class AMateria {
 public:
 	AMateria();
@@ -40,11 +46,15 @@ public:
 		void
 	) const -> AMateria* = 0;
 
-	//virtual void use(ICharacter& target);
+	virtual void use(
+		ICharacter& target
+	) = 0;
+
+	static AMateria*	floor[FLOOR_SIZE];
+	static int			free_floor_idx;
 
 protected:
 	std::string	_type;
-	// need something here
 private:
 };
 
