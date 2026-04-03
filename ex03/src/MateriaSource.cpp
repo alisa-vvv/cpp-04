@@ -52,7 +52,7 @@ auto MateriaSource::learnMateria(
 }
 
 auto MateriaSource::createMateria(
-	std::string const & type
+	std::string const& type
 ) -> AMateria* {
 	int	first_free_slot;
 

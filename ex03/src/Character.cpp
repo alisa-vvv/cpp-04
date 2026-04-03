@@ -6,7 +6,7 @@
 /*   By: avaliull <avaliull@student.codam.nl>              +#+                */
 /*                                                        +#+                 */
 /*   Created: 2026/04/02 14:11:11 by avaliull            #+#    #+#           */
-/*   Updated: 2026/04/02 19:17:51 by avaliull            ########   odam.nl   */
+/*   Updated: 2026/04/03 14:20:16 by avaliull            ########   odam.nl   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,9 +101,3 @@ void Character::use(
 	}
 	_inventory[idx]->use(target);
 }
-
-//auto Character::updateInventory(
-//	AMateria* head
-//) -> void {
-//	_inventory = &head; // afdsafdsak
-//}

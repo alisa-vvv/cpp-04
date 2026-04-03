@@ -19,7 +19,8 @@ CXXFILES	=	main.cpp\
 				Ice.cpp\
 				Cure.cpp\
 				ICharacter.cpp\
-				Character.cpp
+				Character.cpp\
+				MateriaSource.cpp
 
 
 OFILES	= $(addprefix $(BUILDDIR),$(CXXFILES:.cpp=.o))

@@ -6,7 +6,7 @@
 /*   By: avaliull <avaliull@student.codam.nl>              +#+                */
 /*                                                        +#+                 */
 /*   Created: 2026/03/31 20:06:54 by avaliull            #+#    #+#           */
-/*   Updated: 2026/04/02 15:36:43 by avaliull            ########   odam.nl   */
+/*   Updated: 2026/04/03 14:18:04 by avaliull            ########   odam.nl   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,9 +38,7 @@ Cure::~Cure() {
 auto Cure::clone(
 	void
 ) const -> AMateria* {
-	AMateria*	cure_clone = new Cure(getType());
-
-	return (cure_clone);
+	return (new Cure(getType()));
 }
 
 void Cure::use(ICharacter& target) {
